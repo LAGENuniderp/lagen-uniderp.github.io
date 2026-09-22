@@ -1,0 +1,50 @@
+{%- comment -%} Cronograma de aulas. Conteúdo em _data/cronograma.yml {%- endcomment -%}
+{%- assign _aulas = site.data.cronograma -%}
+{%- if _aulas and _aulas.size > 0 -%}
+{%- include ordenar-aulas.html -%}
+{%- assign _mes_abrev = "jan,fev,mar,abr,mai,jun,jul,ago,set,out,nov,dez" | split: "," -%}
+{%- assign _sem_abrev = "dom,seg,ter,qua,qui,sex,sáb" | split: "," %}
+<div class="cronograma-bloco" data-cronograma>
+  <p class="cronograma__alternar" hidden><button type="button" class="botao-texto" data-alternar-anteriores aria-expanded="false">Mostrar aulas anteriores</button></p>
+  <ol class="cronograma">
+  {%- for _c in _chaves_aulas -%}
+    {%- assign _idx = _c | split: "~" | last | plus: 0 -%}
+    {%- assign aula = _aulas[_idx] -%}
+    {%- assign _mi = aula.data | date: "%-m" | minus: 1 -%}
+    {%- assign _wi = aula.data | date: "%w" | plus: 0 -%}
+    {%- assign _hora = aula.horario | strip -%}
+    {%- assign _local = aula.local | strip -%}
+    {%- assign _prof = aula.professor | strip -%}
+    {%- assign _obs = aula.obs | strip %}
+    <li class="aula" data-data="{{ aula.data | date: '%Y-%m-%d' }}">
+      <p class="aula__data">
+        <span class="sr">{% include data.html data=aula.data formato="extenso" %} de {{ aula.data | date: "%Y" }}</span>
+        <span class="aula__dia" aria-hidden="true">{{ aula.data | date: "%-d" }}</span>
+        <span class="aula__mes" aria-hidden="true">{{ _mes_abrev[_mi] }}</span>
+        <span class="aula__semana" aria-hidden="true">{{ _sem_abrev[_wi] }}</span>
+      </p>
+      <div class="aula__corpo">
+        <h3 class="aula__tema">{{ aula.tema }}</h3>
+        <dl class="aula__info">
+          {%- if _hora != "" %}
+          <div><dt>Horário</dt><dd>{{ _hora }}</dd></div>
+          {%- endif -%}
+          {%- if _local != "" %}
+          <div><dt>Local</dt><dd>{{ _local }}</dd></div>
+          {%- endif -%}
+          {%- if _prof != "" %}
+          <div><dt>Convidado(a)</dt><dd>{{ _prof }}</dd></div>
+          {%- endif %}
+        </dl>
+        {%- if _obs != "" %}
+        <p class="aula__obs">{{ _obs }}</p>
+        {%- endif %}
+      </div>
+    </li>
+  {%- endfor %}
+  </ol>
+  <p class="vazio" data-sem-futuras hidden>Nenhuma aula futura publicada ainda. As próximas datas aparecem aqui assim que forem definidas.</p>
+</div>
+{%- else %}
+<p class="vazio">O cronograma do próximo período ainda não foi publicado.</p>
+{%- endif -%}

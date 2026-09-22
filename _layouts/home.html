@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<section class="abertura" aria-labelledby="abertura-titulo">
+  <div class="container abertura__grade">
+    <div class="abertura__texto">
+      <h1 id="abertura-titulo">{{ site.nome_completo }} da {{ site.instituicao }}</h1>
+      <div class="abertura__chamada">
+        {{ content }}
+      </div>
+      <p class="botoes">
+        <a class="botao" href="{{ '/ensino/#cronograma' | relative_url }}">Ver o cronograma de aulas</a>
+        <a class="botao botao--secundario" href="{{ '/a-liga/' | relative_url }}">Conhecer a liga</a>
+      </p>
+      {% include proxima-aula.html %}
+    </div>
+    <div class="abertura__selo">
+      <img src="{{ site.logo | relative_url }}" alt="Selo da {{ site.title }}" width="360" height="360">
+    </div>
+  </div>
+</section>
+
+{% include processo-seletivo.html %}
+
+{% include faq.html %}

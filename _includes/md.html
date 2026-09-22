@@ -1,0 +1,8 @@
+{%- comment -%}
+  Converte texto em Markdown vindo de _data/ em HTML, corrigindo links
+  internos (/pagina/) para funcionar mesmo com baseurl.
+  Uso: {% include md.html texto=x %}  ou  {% include md.html texto=x inline=true %}
+{%- endcomment -%}
+{%- capture _prefixo -%}]({{ site.baseurl }}/{%- endcapture -%}
+{%- assign _html = include.texto | replace: "](/", _prefixo | markdownify -%}
+{%- if include.inline -%}{{ _html | remove: "<p>" | remove: "</p>" | strip }}{%- else -%}{{ _html }}{%- endif -%}

@@ -1,0 +1,57 @@
+{%- comment -%}
+  Bloco do processo seletivo da página inicial.
+  O estado (aberto/fechado) é escolhido em _data/processo_seletivo.yml.
+{%- endcomment -%}
+{%- assign ps = site.data.processo_seletivo -%}
+{%- assign _status = ps.status | strip | downcase -%}
+<section class="selecao" id="processo-seletivo" aria-labelledby="selecao-titulo">
+  <div class="container">
+{%- if _status == "aberto" -%}
+  {%- assign e = ps.aberto -%}
+  {%- assign _edital = e.edital_url | strip -%}
+  {%- assign _inscricao = e.inscricao_url | strip -%}
+  {%- assign _prazo = e.prazo | strip %}
+    <div class="selecao__painel selecao__painel--aberto">
+      <div class="selecao__texto">
+        <h2 id="selecao-titulo">Processo seletivo</h2>
+        <p class="selecao__status selecao__status--aberto">{{ e.mensagem }}</p>
+        {%- if _prazo != "" %}
+        <p class="selecao__prazo">{{ _prazo }}</p>
+        {%- endif %}
+        {% include md.html texto=e.texto %}
+      </div>
+      <div class="selecao__acoes">
+        {%- if _inscricao != "" %}
+        <a class="botao" href="{% include link.html url=_inscricao %}">Fazer inscrição</a>
+        {%- endif -%}
+        {%- if _edital != "" %}
+        <a class="botao botao--secundario" href="{% include link.html url=_edital %}">Ler o edital</a>
+        {%- endif %}
+      </div>
+    </div>
+{%- else -%}
+  {%- assign e = ps.fechado -%}
+  {%- assign _form = e.formulario_embed | strip -%}
+  {%- if _form contains "<iframe" -%}
+    {%- comment -%} Se colaram o código inteiro do iframe, aproveita só o endereço. {%- endcomment -%}
+    {%- assign _form = _form | split: 'src="' | last | split: '"' | first -%}
+  {%- endif -%}
+  {%- assign _form_link = _form | replace: "embedded=true", "usp=sf_link" %}
+    <div class="selecao__painel{% if _form == '' %} selecao__painel--simples{% endif %}">
+      <div class="selecao__texto">
+        <h2 id="selecao-titulo">Processo seletivo</h2>
+        <p class="selecao__status">{{ e.mensagem }}</p>
+        {%- if _form != "" %}
+        {% include md.html texto=e.texto %}
+        <p class="selecao__alternativa"><a href="{{ _form_link }}" target="_blank" rel="noopener">Abrir o formulário em outra aba</a></p>
+        {%- endif %}
+      </div>
+      {%- if _form != "" %}
+      <div class="selecao__form">
+        <iframe src="{{ _form }}" title="Formulário da lista de interesse no processo seletivo" height="{{ e.formulario_altura | default: 620 }}" loading="lazy">Carregando formulário…</iframe>
+      </div>
+      {%- endif %}
+    </div>
+{%- endif %}
+  </div>
+</section>

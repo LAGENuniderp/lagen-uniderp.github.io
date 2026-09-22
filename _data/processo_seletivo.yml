@@ -1,0 +1,32 @@
+# =====================================================================
+#  PROCESSO SELETIVO
+#  Para abrir ou fechar as inscrições, troque SÓ a palavra abaixo:
+#     fechado → mostra "Inscrições fechadas até 2027" + lista de interesse
+#     aberto  → mostra o edital e o botão de inscrição
+# =====================================================================
+
+status: fechado
+
+# ---------------------------------------------------------------------
+#  Textos e links de cada estado (preencha uma vez e só alterne acima)
+# ---------------------------------------------------------------------
+
+fechado:
+  mensagem: "Inscrições fechadas até 2027"
+  # O texto abaixo só aparece quando o formulário estiver configurado.
+  texto: >-
+    Deixe seu e-mail na lista de interesse e você será avisado quando o
+    próximo edital for publicado.
+  # Google Forms → Enviar → aba "< >" → copie só o endereço que está
+  # dentro de src="...". Deixe "" enquanto não tiver o formulário.
+  formulario_embed: ""
+  formulario_altura: 620   # altura do formulário, em pixels
+
+aberto:
+  mensagem: "Inscrições abertas"
+  prazo: ""                # opcional, ex.: "Até 15 de março de 2027"
+  texto: >-
+    Leia o edital antes de se inscrever. [PREENCHER: período de inscrição,
+    requisitos e data da prova.]
+  edital_url: ""           # link do edital (PDF no Drive ou em assets/docs/)
+  inscricao_url: ""        # link do formulário de inscrição

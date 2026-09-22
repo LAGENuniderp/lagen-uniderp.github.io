@@ -1,0 +1,22 @@
+{%- comment -%}
+  Botão do estatuto no Painel de transparência. Só aparece quando o PDF
+  indicado em "estatuto_pdf" (a-liga/transparencia.md) existe no site.
+{%- endcomment -%}
+{%- assign _pdf = page.estatuto_pdf | strip -%}
+{%- assign _existe = false -%}
+{%- if _pdf != "" -%}
+  {%- for _f in site.static_files -%}
+    {%- if _f.path == _pdf -%}{%- assign _existe = true -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif %}
+<div class="documento">
+  {%- if _existe %}
+  <p><a class="botao" href="{{ _pdf | relative_url }}">Baixar o estatuto em PDF</a></p>
+  {%- else %}
+  <p class="vazio">O PDF do estatuto será publicado aqui após a aprovação em assembleia.</p>
+  {%- endif -%}
+  {%- assign _versao = page.estatuto_versao | strip -%}
+  {%- if _versao != "" %}
+  <p class="documento__versao">{{ _versao }}</p>
+  {%- endif %}
+</div>

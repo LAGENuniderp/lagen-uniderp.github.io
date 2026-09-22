@@ -1,0 +1,28 @@
+<header class="topo">
+  <div class="container topo__barra">
+    <a class="marca" href="{{ '/' | relative_url }}">
+      <img class="marca__selo" src="{{ site.logo | relative_url }}" alt="" width="52" height="52">
+      <span class="marca__texto">
+        <span class="marca__sigla">{{ site.title }}</span>
+        <span class="marca__nome">{{ site.nome_completo }}</span>
+      </span>
+    </a>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <span class="menu-botao__icone" aria-hidden="true"></span>Menu
+    </button>
+    <nav id="menu-principal" class="menu" aria-label="Menu principal">
+      <ul>
+        {%- for item in site.data.navegacao -%}
+          {%- assign _secao = false -%}
+          {%- if item.url == "/" -%}
+            {%- if page.url == "/" -%}{%- assign _secao = true -%}{%- endif -%}
+          {%- elsif page.url contains item.url -%}
+            {%- assign _secao = true -%}
+          {%- endif %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% elsif _secao %} class="ativo"{% endif %}>{{ item.titulo }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="anel" aria-hidden="true"></div>
+</header>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'pt-BR' }}" class="no-js">
+<head>
+{% include head.html %}
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  {% include avisos.html %}
+  {% include header.html %}
+  <main id="conteudo" tabindex="-1">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ '/assets/js/lagen.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+</body>
+</html>

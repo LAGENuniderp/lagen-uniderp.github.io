@@ -1,0 +1,83 @@
+# =====================================================================
+#  DIRETORIA (página "A Liga"). A ordem aqui é a ordem no site.
+#
+#  foto:     opcional. Envie para assets/img/diretoria/ uma foto
+#            quadrada (~400×400 px, até 150 KB) e escreva o caminho,
+#            ex.: /assets/img/diretoria/joao-pedro-reis.jpg
+#            Sem foto, o site mostra as iniciais.
+#  email:    opcional. Prefira e-mail da liga ou institucional.
+#  telefone: opcional e NÃO recomendado: o site e o repositório são
+#            públicos. Leia "Dados pessoais e direitos de imagem" no README.
+# =====================================================================
+
+- nome: João Pedro Reis
+  cargo: Presidente
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Pedro Lavezo
+  cargo: Vice-Presidente
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Anna Julia Araújo
+  cargo: Diretoria Geral
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Camila Cabrera
+  cargo: Diretora Secretária
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Beatriz Albuquerque
+  cargo: Diretora de Extensão
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Maria Eduarda Linares
+  cargo: Diretora de Eventos e Comunicação
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Isaac Goldoni
+  cargo: Diretor Tesoureiro
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Maria Clara Giroto
+  cargo: Diretora de Ensino Teórico
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Ana Laura Giroto
+  cargo: Diretora de Estágios
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Tamaeh Monteiro
+  cargo: Diretora Científica
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Maria Eduarda Duchini
+  cargo: Diretora Cultural
+  foto: ""
+  email: ""
+  telefone: ""
+
+- nome: Eduardo Borba
+  cargo: Diretor de Relações Externas
+  foto: ""
+  email: ""
+  telefone: ""

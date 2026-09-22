@@ -1,0 +1,33 @@
+{%- assign _hoje = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- assign _ativos = site.data.avisos | where: "ativo", true -%}
+{%- if _ativos.size > 0 -%}
+<div class="avisos" role="region" aria-label="Avisos">
+  {%- for aviso in _ativos -%}
+    {%- assign _exp = "" -%}
+    {%- assign _vencido = false -%}
+    {%- assign _exp_txt = aviso.expira | strip -%}
+    {%- if _exp_txt != "" -%}
+      {%- assign _exp = aviso.expira | date: "%Y-%m-%d" -%}
+      {%- assign _exp_n = aviso.expira | date: "%Y%m%d" | plus: 0 -%}
+      {%- if _exp_n < _hoje -%}{%- assign _vencido = true -%}{%- endif -%}
+    {%- endif -%}
+    {%- unless _vencido %}
+  <div class="aviso aviso--{{ aviso.tipo | default: 'info' | strip | downcase }}"{% if _exp != "" %} data-expira="{{ _exp }}"{% endif %}>
+    <p class="container">{% include md.html texto=aviso.texto inline=true %}
+      {%- assign _lk = aviso.link | strip -%}
+      {%- if _lk != "" %} <a href="{% include link.html url=_lk %}">Saiba mais</a>{% endif -%}
+    </p>
+  </div>
+    {%- endunless -%}
+  {%- endfor %}
+</div>
+<script>
+  /* Esconde avisos vencidos mesmo que o site não tenha sido atualizado. */
+  (function () {
+    var d = new Date(), h = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2);
+    document.querySelectorAll(".aviso[data-expira]").forEach(function (el) {
+      if (el.getAttribute("data-expira") < h) el.parentNode.removeChild(el);
+    });
+  })();
+</script>
+{%- endif -%}

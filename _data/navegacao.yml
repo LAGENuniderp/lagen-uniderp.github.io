@@ -1,0 +1,26 @@
+# Menu principal do site. Raramente precisa ser editado.
+# "sub" são os atalhos que aparecem abaixo do título da página.
+
+- titulo: Início
+  url: /
+
+- titulo: A Liga
+  url: /a-liga/
+  sub:
+    - titulo: Quem somos e diretoria
+      url: /a-liga/
+    - titulo: Transparência
+      url: /a-liga/transparencia/
+
+- titulo: Ensino e Prática
+  url: /ensino/
+  sub:
+    - titulo: Cronograma de aulas
+      url: /ensino/#cronograma
+    - titulo: Escala de estágios e plantões
+      url: /ensino/#escala
+    - titulo: Biblioteca acadêmica
+      url: /ensino/#biblioteca
+
+- titulo: Galeria
+  url: /galeria/

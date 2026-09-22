@@ -1,0 +1,15 @@
+{%- comment -%} Escala (Google Planilhas). Configuração em _data/escala.yml {%- endcomment -%}
+{%- assign _url = site.data.escala.planilha_embed | strip -%}
+{%- if _url contains "<iframe" -%}
+  {%- comment -%} Se colaram o código inteiro do iframe, aproveita só o endereço. {%- endcomment -%}
+  {%- assign _url = _url | split: 'src="' | last | split: '"' | first -%}
+{%- endif -%}
+{%- if _url != "" -%}
+{%- assign _completa = _url | split: "?" | first %}
+<div class="embed embed--planilha">
+  <iframe src="{{ _url }}" title="Escala de estágios e plantões" height="{{ site.data.escala.altura | default: 640 }}" loading="lazy"></iframe>
+</div>
+<p class="embed__alternativa"><a href="{{ _completa }}" target="_blank" rel="noopener">Abrir a escala em tela cheia<span class="sr"> (abre em outra aba)</span></a></p>
+{%- else %}
+<p class="vazio">A escala deste período ainda não foi publicada.</p>
+{%- endif -%}

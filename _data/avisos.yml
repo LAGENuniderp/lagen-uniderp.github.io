@@ -1,0 +1,20 @@
+# =====================================================================
+#  MURAL DE AVISOS
+#  Aparece como faixa no topo de TODAS as páginas.
+#
+#  Publicar: copie o bloco de exemplo, preencha e deixe  ativo: true
+#  Tirar do ar: ativo: false  (ou apague o bloco)
+#
+#  texto:  aceita **negrito** e [link](https://...)
+#  tipo:   urgente → faixa bordô (mudança de sala, cancelamento)
+#          info    → faixa bege (lembretes em geral)
+#  expira: o aviso some sozinho no dia SEGUINTE a esta data.
+#          Formato AAAA-MM-DD, sem aspas. Use "" para não expirar.
+#  link:   opcional, para um "Saiba mais"
+# =====================================================================
+
+- texto: "Exemplo: a aula de 07/10 foi transferida para o **Auditório do Bloco B**."
+  tipo: urgente
+  expira: 2026-10-07
+  link: ""
+  ativo: false

@@ -1,0 +1,38 @@
+# =====================================================================
+#  BIBLIOTECA ACADÊMICA — SOMENTE MATERIAL AUTORAL DA LAGEN
+#  Proibido: livros, capítulos, diretrizes, slides de professores,
+#  figuras ou tabelas copiadas de terceiros. Para diretrizes, use
+#  "fontes_externas" (apenas o link para o site oficial).
+#
+#  Casos clínicos: somente anonimizados (sem nome, iniciais, idade
+#  exata, datas, local de atendimento ou fotos). Ver README.
+#
+#  arquivo: PDF enviado para assets/docs/biblioteca/  (até ~2 MB)
+#           ex.: /assets/docs/biblioteca/resumo-drge.pdf
+#  link:    OU um link do Google Drive (arquivo da conta da liga)
+#  tipo:    Resumo | Caso clínico | Outro
+#  data:    AAAA-MM-DD, sem aspas
+# =====================================================================
+
+materiais:
+  - titulo: "Doença do refluxo gastroesofágico: resumo de revisão (exemplo)"
+    tipo: Resumo
+    autores: "Nome Sobrenome, Nome Sobrenome"
+    data: 2026-09-10
+    arquivo: ""
+    link: ""
+    descricao: "Exemplo de como um material aparece. Apague este bloco."
+
+  - titulo: "Diarreia crônica em adulto jovem (exemplo)"
+    tipo: Caso clínico
+    autores: "Nome Sobrenome"
+    data: 2026-08-20
+    arquivo: ""
+    link: ""
+    descricao: "Caso fictício para discussão em aula. Apague este bloco."
+
+# Links para fontes oficiais (sociedades médicas, diretrizes). Nunca
+# envie o PDF de terceiros para o repositório; só o link.
+fontes_externas: []
+#  - titulo: "Nome da sociedade ou diretriz"
+#    url: "https://..."

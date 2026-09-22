@@ -1,0 +1,35 @@
+{%- comment -%}
+  "Próxima aula" da página inicial. Separa até 6 aulas futuras na hora
+  da publicação; o navegador mostra a primeira que ainda não passou.
+{%- endcomment -%}
+{%- assign _aulas = site.data.cronograma -%}
+{%- if _aulas and _aulas.size > 0 -%}
+{%- include ordenar-aulas.html -%}
+{%- assign _hoje_n = site.time | date: "%Y%m%d" | plus: 0 -%}
+{%- assign _qtd = 0 -%}
+{%- capture _itens -%}
+{%- for _c in _chaves_aulas -%}
+  {%- assign _idx = _c | split: "~" | last | plus: 0 -%}
+  {%- assign aula = _aulas[_idx] -%}
+  {%- assign _dn = aula.data | date: "%Y%m%d" | plus: 0 -%}
+  {%- if _dn >= _hoje_n and _qtd < 6 -%}
+    {%- assign _hora = aula.horario | strip -%}
+    {%- assign _local = aula.local | strip %}
+  <a class="proxima__item" href="{{ '/ensino/#cronograma' | relative_url }}" data-data="{{ aula.data | date: '%Y-%m-%d' }}"{% if _qtd > 0 %} hidden{% endif %}>
+    <span class="proxima__quando">{% include data.html data=aula.data formato="extenso" %}{% if _hora != "" %}, {{ _hora }}{% endif %}</span>
+    <span class="proxima__tema">{{ aula.tema }}</span>
+    {%- if _local != "" %}
+    <span class="proxima__local">Local: {{ _local }}</span>
+    {%- endif %}
+  </a>
+    {%- assign _qtd = _qtd | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- if _qtd > 0 %}
+<div class="proxima" data-proxima>
+  <h2 class="proxima__titulo">Próxima aula</h2>
+  {{ _itens }}
+</div>
+{%- endif -%}
+{%- endif -%}

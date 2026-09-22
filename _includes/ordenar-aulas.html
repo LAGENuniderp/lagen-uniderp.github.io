@@ -1,0 +1,14 @@
+{%- comment -%}
+  Ordena as aulas de _data/cronograma.yml por data, sem quebrar o site
+  se alguma data for escrita com aspas. Resultado: _chaves_aulas, uma
+  lista "AAAAMMDD~posição" já em ordem cronológica.
+{%- endcomment -%}
+{%- assign _acc = "" -%}
+{%- for _a in site.data.cronograma -%}
+  {%- assign _k = _a.data | date: "%Y%m%d" | append: "" -%}
+  {%- comment -%} Aula sem data válida (AAAA-MM-DD) é ignorada. {%- endcomment -%}
+  {%- if _k.size == 8 -%}
+  {%- capture _acc -%}{{ _acc }}{{ _k }}~{{ forloop.index0 }}|{%- endcapture -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign _chaves_aulas = _acc | split: "|" | sort -%}

@@ -1,0 +1,12 @@
+# =====================================================================
+#  ESCALA DE ESTÁGIOS E PLANTÕES (Google Planilhas)
+#  A escala é editada direto na planilha; o site só a exibe. Não é
+#  preciso mexer aqui toda semana, só na primeira configuração.
+#
+#  Planilha → Arquivo → Compartilhar → Publicar na Web → escolha a aba
+#  → "Incorporar" → Publicar → copie só o endereço que está dentro de
+#  src="..." e cole abaixo, entre as aspas.
+# =====================================================================
+
+planilha_embed: ""
+altura: 640   # altura da planilha na página, em pixels

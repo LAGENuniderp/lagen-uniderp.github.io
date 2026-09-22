@@ -1,0 +1,28 @@
+<footer class="rodape">
+  <div class="anel" aria-hidden="true"></div>
+  <div class="container rodape__grade">
+    <div class="rodape__marca">
+      <img src="{{ site.logo | relative_url }}" alt="" width="84" height="84" loading="lazy">
+      <p><strong>{{ site.title }}</strong><br>{{ site.nome_completo }} da {{ site.instituicao }}<br>{{ site.cidade }}</p>
+    </div>
+    <nav class="rodape__links" aria-label="Rodapé">
+      <ul>
+        {%- for item in site.data.navegacao %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.titulo }}</a></li>
+        {%- endfor %}
+        <li><a href="{{ '/a-liga/transparencia/' | relative_url }}">Transparência</a></li>
+      </ul>
+    </nav>
+    <div class="rodape__contato">
+      {%- assign _email = site.contato.email | strip -%}
+      {%- assign _insta = site.contato.instagram | strip | remove: "@" -%}
+      {%- if _email != "" %}
+      <p><a href="mailto:{{ _email }}">{{ _email }}</a></p>
+      {%- endif -%}
+      {%- if _insta != "" %}
+      <p><a href="https://www.instagram.com/{{ _insta }}/" rel="noopener">@{{ _insta }} no Instagram</a></p>
+      {%- endif %}
+      <p class="rodape__atualizado">Site atualizado em {{ site.time | date: "%d/%m/%Y" }}</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+{%- comment -%}
+  Datas em português. Uso:
+  {% include data.html data=x %}                    → 07/10/2026
+  {% include data.html data=x formato="extenso" %}  → quarta-feira, 7 de outubro
+  {% include data.html data=x formato="mes-ano" %}  → outubro de 2026
+{%- endcomment -%}
+{%- if include.data -%}
+{%- assign _meses = "janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro" | split: "," -%}
+{%- assign _dias = "domingo,segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado" | split: "," -%}
+{%- assign _m = include.data | date: "%-m" | minus: 1 -%}
+{%- assign _w = include.data | date: "%w" | plus: 0 -%}
+{%- case include.formato -%}
+{%- when "extenso" -%}{{ _dias[_w] }}, {{ include.data | date: "%-d" }} de {{ _meses[_m] }}
+{%- when "mes-ano" -%}{{ _meses[_m] }} de {{ include.data | date: "%Y" }}
+{%- else -%}{{ include.data | date: "%d/%m/%Y" }}
+{%- endcase -%}
+{%- endif -%}

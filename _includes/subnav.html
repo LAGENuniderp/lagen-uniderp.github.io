@@ -1,0 +1,25 @@
+{%- comment -%}
+  Atalhos abaixo do título da página. Vêm de _data/navegacao.yml
+  (campo "sub") ou, na galeria, das categorias de _data/galeria.yml.
+{%- endcomment -%}
+{%- if page.subnav == "galeria" %}
+<nav class="subnav" aria-label="Categorias da galeria">
+  <ul>
+    {%- for c in site.data.galeria.categorias %}
+    <li><a href="#{{ c.id }}">{{ c.titulo }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>
+{%- else -%}
+  {%- for item in site.data.navegacao -%}
+    {%- if item.sub and item.url != "/" and page.url contains item.url %}
+<nav class="subnav" aria-label="Seções de {{ item.titulo }}">
+  <ul>
+    {%- for s in item.sub %}
+    <li><a href="{{ s.url | relative_url }}"{% if s.url == page.url %} aria-current="page"{% endif %}>{{ s.titulo }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

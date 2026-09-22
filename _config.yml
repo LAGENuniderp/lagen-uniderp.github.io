@@ -1,0 +1,55 @@
+# =====================================================================
+#  CONFIGURAÇÃO GERAL DO SITE DA LAGEN
+#  Quase nunca precisa mexer aqui. O conteúdo do dia a dia fica na
+#  pasta _data/ — veja o README.
+# =====================================================================
+
+title: LAGEN
+nome_completo: Liga Acadêmica de Gastroenterologia e Nutrologia
+instituicao: Uniderp
+cidade: Campo Grande, MS
+description: >-
+  Liga Acadêmica de Gastroenterologia e Nutrologia da Uniderp: aulas,
+  estágios, material autoral e processo seletivo.
+lang: pt-BR
+timezone: America/Campo_Grande
+
+# Endereço do site.
+# Repositório "lagen-uniderp.github.io" na organização "lagen-uniderp":
+# deixe baseurl vazio. Repositório com outro nome (ex.: "site"):
+# use baseurl: "/site".
+url: "https://lagen-uniderp.github.io"
+baseurl: ""
+
+# Logo e ícone da aba. Para trocar, substitua os arquivos mantendo
+# o MESMO nome (veja "Logo e favicon" no README).
+logo: /assets/img/logo.png
+favicon: /assets/img/favicon.png
+
+# Contato institucional da liga (rodapé). Deixe "" para esconder.
+contato:
+  email: ""        # ex.: lagen.uniderp@gmail.com
+  instagram: ""    # só o usuário, sem @ (ex.: lagen.uniderp)
+
+# ---------------------------------------------------------------------
+# Daqui para baixo é parte técnica. Não precisa alterar.
+# ---------------------------------------------------------------------
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .jekyll-cache

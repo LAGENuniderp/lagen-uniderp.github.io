@@ -1,0 +1,18 @@
+<section class="faq" id="faq" aria-labelledby="faq-titulo">
+  <div class="container faq__grade">
+    <div class="faq__intro">
+      <h2 id="faq-titulo">Perguntas frequentes</h2>
+      {%- assign _e = site.contato.email | strip -%}
+      {%- assign _i = site.contato.instagram | strip %}
+      <p>Não encontrou sua dúvida? {% if _e != "" or _i != "" %}Fale com a diretoria pelos contatos no fim da página.{% else %}Fale com a <a href="{{ '/a-liga/#diretoria' | relative_url }}">diretoria</a>.{% endif %}</p>
+    </div>
+    <div class="faq__lista">
+      {%- for f in site.data.faq %}
+      <details class="faq__item">
+        <summary>{{ f.pergunta }}</summary>
+        <div class="faq__resposta">{% include md.html texto=f.resposta %}</div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

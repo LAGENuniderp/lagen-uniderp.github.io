@@ -1,0 +1,7 @@
+{%- comment -%}
+  Devolve um endereço pronto para usar em href/src.
+  Endereços externos (https://...) saem como estão; caminhos do próprio
+  site (/assets/...) ganham o baseurl. Uso: {% include link.html url=x %}
+{%- endcomment -%}
+{%- assign _u = include.url | strip -%}
+{%- if _u contains "://" or _u contains "mailto:" or _u contains "tel:" -%}{{ _u }}{%- else -%}{{ _u | relative_url }}{%- endif -%}
