@@ -18,8 +18,8 @@ timezone: America/Campo_Grande
 # Repositório "lagen-uniderp.github.io" na organização "lagen-uniderp":
 # deixe baseurl vazio. Repositório com outro nome (ex.: "site"):
 # use baseurl: "/site".
-url: "https://lagen-uniderp.github.io"
-baseurl: ""
+url: "https://lagenuniderp.github.io"
+baseurl: "/lagen-uniderp.github.io"
 
 # Logo e ícone da aba. Para trocar, substitua os arquivos mantendo
 # o MESMO nome (veja "Logo e favicon" no README).
