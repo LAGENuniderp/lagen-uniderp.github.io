@@ -810,3 +810,8 @@ a.album__link:hover .album__titulo {
   .cronograma--ocultar .aula--anterior { display: grid; }
   .rodape { background: none; }
 }
+
+/* Subseções dentro de uma categoria da galeria (ex.: Ações Comunitárias) */
+.galeria-subsecao { margin-top: 2rem; }
+.galeria-subsecao:first-child { margin-top: 1.25rem; }
+.galeria-subsecao h3 { margin: 0 0 .25rem; color: var(--vinho); }
