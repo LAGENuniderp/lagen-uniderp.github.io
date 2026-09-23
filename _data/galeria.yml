@@ -32,7 +32,7 @@ categorias:
     data: ""
     capa: /assets/img/galeria/aula-boas-vindas-gestao.jpg
     link: ""
-  - titulo: "Aula sobre História da Doença Atual (HDA)"
+  - titulo: "Aula sobre Hemorragia Digestiva Alta (HDA)"
     data: ""
     capa: /assets/img/galeria/aula-hda.jpg
     link: ""
@@ -44,7 +44,7 @@ categorias:
     data: ""
     capa: /assets/img/galeria/aula-estudo-em-grupo.jpg
     link: ""
-  - titulo: "Encerramento de aula"
+  - titulo: "Aula sobre procedimentos endoscópicos"
     data: ""
     capa: /assets/img/galeria/aula-encerramento.jpg
     link: ""
