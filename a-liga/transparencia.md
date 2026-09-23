@@ -26,8 +26,6 @@ aplicável em caso de descumprimento das normas.
 
 ## Regras de convivência {#convivencia}
 
-[PREENCHER: confirmar com a diretoria antes de publicar.]
-
 - Respeito a colegas, professores, preceptores, pacientes e equipes dos
   serviços de saúde.
 - Sigilo sobre pacientes: nada de fotos, nomes ou dados clínicos
@@ -42,20 +40,20 @@ aplicável em caso de descumprimento das normas.
   semestre (frequência mínima de 75%, conforme o Estatuto).
 - Justificativas aceitas: atestado médico ou comprovante de atividade
   acadêmica, entregues à Diretoria Secretária em até 48 horas.
-- Ausência em estágio ou plantão sem aviso com [PREENCHER] horas de
-  antecedência conta como [PREENCHER].
+- Ausência em estágio ou plantão sem aviso com 24 horas de antecedência
+  conta como advertência grave.
 - Quem ultrapassa o limite de faltas é desligado(a) (expulso(a)) da Liga.
 
 ## Critérios de certificação {#certificacao}
 
-- O certificado de participação exige presença mínima de [PREENCHER]% nas
-  atividades teóricas e de [PREENCHER]% nas atividades práticas do período.
+- O certificado de participação exige presença mínima de 75% nas
+  atividades teóricas e de 50% nas atividades práticas do período.
 - A carga horária certificada corresponde apenas às atividades com
   presença registrada em lista.
 - Membros desligados por excesso de faltas não recebem certificado do
   período.
-- Os certificados são emitidos por [PREENCHER: responsável], em até
-  [PREENCHER] dias após o fim do período. Este site não emite nem
+- Os certificados são emitidos pelo Presidente e pelo coordenador do
+  curso, em até 3 meses após o fim do período. Este site não emite nem
   armazena certificados.
 
 {% comment %}
