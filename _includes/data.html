@@ -4,7 +4,7 @@
   {% include data.html data=x formato="extenso" %}  → quarta-feira, 7 de outubro
   {% include data.html data=x formato="mes-ano" %}  → outubro de 2026
 {%- endcomment -%}
-{%- if include.data -%}
+{%- if include.data and include.data != empty -%}
 {%- assign _meses = "janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro" | split: "," -%}
 {%- assign _dias = "domingo,segunda-feira,terça-feira,quarta-feira,quinta-feira,sexta-feira,sábado" | split: "," -%}
 {%- assign _m = include.data | date: "%-m" | minus: 1 -%}
