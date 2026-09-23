@@ -9,41 +9,18 @@
 #  professor: convidado(a); opcional
 #  local:     sala e bloco, ou "Online" com o link em obs
 #  obs:       opcional (ex.: "Levar estetoscópio")
-#
-#  ATENÇÃO: as aulas abaixo são EXEMPLOS. Apague e cadastre as reais.
 # =====================================================================
 
-- data: 2026-09-02
-  horario: "19h00"
-  tema: "Avaliação do estado nutricional à beira do leito (exemplo)"
-  professor: "A confirmar"
+- data: 2026-09-30
+  horario: "18h00"
+  tema: "Nutrologia básica"
+  professor: "Luiza Camargo"
   local: "A definir"
   obs: ""
 
-- data: 2026-09-16
-  horario: "19h00"
-  tema: "Hemorragia digestiva alta: abordagem inicial (exemplo)"
-  professor: "A confirmar"
-  local: "A definir"
-  obs: ""
-
-- data: 2026-10-07
-  horario: "19h00"
-  tema: "Doença do refluxo gastroesofágico: diagnóstico e manejo (exemplo)"
-  professor: "A confirmar"
-  local: "A definir"
-  obs: ""
-
-- data: 2026-10-21
-  horario: "19h00"
-  tema: "Terapia nutricional enteral e parenteral (exemplo)"
-  professor: "A confirmar"
-  local: "A definir"
-  obs: "Aula com discussão de caso clínico."
-
-- data: 2026-11-04
-  horario: "19h00"
-  tema: "Doença inflamatória intestinal (exemplo)"
-  professor: "A confirmar"
+- data: 2026-10-13
+  horario: "16h30"
+  tema: "Gastroenterologia básica"
+  professor: "Déborah"
   local: "A definir"
   obs: ""
