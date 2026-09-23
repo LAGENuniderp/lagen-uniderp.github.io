@@ -6,9 +6,6 @@ description: Cronograma de aulas, escala de estágios e plantões e biblioteca a
 
 ## Cronograma de aulas {#cronograma}
 
-Aulas [PREENCHER: dia da semana e frequência, ex.: quinzenais, às quartas].
-As aulas que já passaram ficam ocultas; o botão abaixo mostra o histórico.
-
 {% include cronograma.html %}
 
 ## Escala de estágios e plantões {#escala}
