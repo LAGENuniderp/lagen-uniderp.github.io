@@ -31,6 +31,14 @@ materiais:
     link: ""
     descricao: "Caso fictício para discussão em aula. Apague este bloco."
 
+  - titulo: "Diagnóstico e tratamento da doença do refluxo gastroesofágico"
+    tipo: Caso clínico
+    autores: "Maria Aparecida Coelho de Arruda Henry"
+    data: 2014-07-01
+    arquivo: ""
+    link: "https://www.scielo.br/j/abcd/a/ypHKhPWMST8F97KFQFpqQBv/?lang=pt"
+    descricao: "Revisão sobre diagnóstico e tratamento da DRGE, publicada na ABCD - Arquivos Brasileiros de Cirurgia Digestiva (2014)."
+
 # Links para fontes oficiais (sociedades médicas, diretrizes). Nunca
 # envie o PDF de terceiros para o repositório; só o link.
 fontes_externas: []
