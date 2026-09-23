@@ -6,7 +6,7 @@ description: Estatuto, regras de convivência, critérios de faltas e critérios
 # Estatuto em PDF: envie o arquivo para assets/docs/ com exatamente este
 # nome. Enquanto o arquivo não existir, o botão de download não aparece.
 estatuto_pdf: /assets/docs/estatuto-lagen.pdf
-estatuto_versao: "[PREENCHER: ex.: Versão aprovada em assembleia de 10/03/2026.]"
+estatuto_versao: "Documento Institucional Consolidado aprovado em 18/08/2026, assinado digitalmente pelo Diretor Presidente e pela Docente Orientadora."
 ---
 
 * Sumário
@@ -16,9 +16,13 @@ estatuto_versao: "[PREENCHER: ex.: Versão aprovada em assembleia de 10/03/2026.
 
 {% include estatuto.html %}
 
-O estatuto define a finalidade da liga, a composição e as atribuições da
-diretoria, os direitos e deveres dos membros e as regras de eleição.
-[PREENCHER: resumo dos pontos principais em 3 a 5 linhas.]
+O estatuto define a LAGEN como organização estudantil sem finalidade
+lucrativa vinculada ao Curso de Medicina da Universidade Anhanguera-Uniderp,
+fundada em 02/06/2025. Ele estabelece a composição da Liga (Docente
+Orientador, Diretoria Discente e membros efetivos, ouvintes e especiais),
+as competências de cada cargo da diretoria, os direitos e deveres dos
+membros, os critérios de frequência e certificação e o regime disciplinar
+aplicável em caso de descumprimento das normas.
 
 ## Regras de convivência {#convivencia}
 
@@ -34,12 +38,13 @@ diretoria, os direitos e deveres dos membros e as regras de eleição.
 
 ## Critérios de faltas {#faltas}
 
-- Limite de [PREENCHER] faltas não justificadas por semestre.
-- Justificativas aceitas: [PREENCHER: ex.: atestado médico, convocação
-  acadêmica], entregues à Diretoria Secretária em até [PREENCHER] dias.
+- Limite de 25% de faltas não justificadas nas atividades teóricas por
+  semestre (frequência mínima de 75%, conforme o Estatuto).
+- Justificativas aceitas: atestado médico ou comprovante de atividade
+  acadêmica, entregues à Diretoria Secretária em até 48 horas.
 - Ausência em estágio ou plantão sem aviso com [PREENCHER] horas de
   antecedência conta como [PREENCHER].
-- Quem ultrapassa o limite [PREENCHER: consequência prevista no estatuto].
+- Quem ultrapassa o limite de faltas é desligado(a) (expulso(a)) da Liga.
 
 ## Critérios de certificação {#certificacao}
 
