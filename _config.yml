@@ -28,8 +28,8 @@ favicon: /assets/img/favicon.png
 
 # Contato institucional da liga (rodapé). Deixe "" para esconder.
 contato:
-  email: ""        # ex.: lagen.uniderp@gmail.com
-  instagram: ""    # só o usuário, sem @ (ex.: lagen.uniderp)
+    email: "lagenudp@gmail.com"        # ex.: lagen.uniderp@gmail.com
+    instagram: "lagen_uniderp"    # só o usuário, sem @ (ex.: lagen.uniderp)
 
 # ---------------------------------------------------------------------
 # Daqui para baixo é parte técnica. Não precisa alterar.
