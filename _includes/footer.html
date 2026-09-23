@@ -1,37 +1,38 @@
 <footer class="rodape">
-  <div class="anel" aria-hidden="true"></div>
-  <div class="container rodape__grade">
-    <div class="rodape__marca">
-      <img src="{{ site.logo | relative_url }}" alt="" width="84" height="84" loading="lazy">
-      <p><strong>{{ site.title }}</strong><br>{{ site.nome_completo }} da {{ site.instituicao }}<br>{{ site.cidade }}</p>
-    </div>
-    <nav class="rodape__links" aria-label="Rodapé">
-      <ul>
-        {%- for item in site.data.navegacao %}
-        <li><a href="{{ item.url | relative_url }}">{{ item.titulo }}</a></li>
-        {%- endfor %}
-        <li><a href="{{ '/a-liga/transparencia/' | relative_url }}">Transparência</a></li>
-      </ul>
-    </nav>
-    <div class="rodape__contato">
-      {%- assign _email = site.contato.email | strip -%}
-      {%- assign _insta = site.contato.instagram | strip | remove: "@" -%}
-      {%- if _email != "" %}
-      <p><a href="mailto:{{ _email }}">{{ _email }}</a></p>
-      {%- endif -%}
-      {%- if _insta != "" %}
-      <p>
-        <a class="rodape__instagram-link" href="https://www.instagram.com/{{ _insta }}/" rel="noopener" target="_blank" aria-label="{{ site.title }} no Instagram (abre em nova aba)">
-          <svg class="rodape__instagram-icone" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false">
-            <rect x="3" y="3" width="18" height="18" rx="5.5"/>
-            <circle cx="12" cy="12" r="4.1"/>
-            <circle cx="17.3" cy="6.7" r="1.05" fill="currentColor" stroke="none"/>
-          </svg>
-          <span>@{{ _insta }} no Instagram</span>
-        </a>
-      </p>
-      {%- endif %}
-      <p class="rodape__atualizado">Site atualizado em {{ site.time | date: "%d/%m/%Y" }}</p>
-    </div>
-  </div>
+<div class="anel" aria-hidden="true"></div>
+<div class="container rodape__grade">
+<div class="rodape__marca">
+<img src="{{ site.logo | relative_url }}" alt="" width="84" height="84" loading="lazy">
+<p><strong>{{ site.title }}</strong><br>{{ site.nome_completo }} da {{ site.instituicao }}<br>{{ site.cidade }}</p>
+</div>
+<nav class="rodape__links" aria-label="Rodapé">
+<ul>
+{%- for item in site.data.navegacao %}
+<li><a href="{{ item.url | relative_url }}">{{ item.titulo }}</a></li>
+{%- endfor %}
+<li><a href="{{ '/a-liga/transparencia/' | relative_url }}">Transparência</a></li>
+</ul>
+</nav>
+<div class="rodape__contato">
+{%- assign _email = site.contato.email | strip -%}
+{%- assign _insta = site.contato.instagram | strip | remove: "@" -%}
+{%- if _email != "" %}
+<p><a href="mailto:{{ _email }}">{{ _email }}</a></p>
+{%- endif -%}
+{%- if _insta != "" %}
+<p>
+<a class="rodape__instagram-link" href="https://www.instagram.com/{{ _insta }}/" rel="noopener" target="_blank" aria-label="{{ site.title }} no Instagram (abre em nova aba)">
+<svg class="rodape__instagram-icone" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false">
+<rect x="3" y="3" width="18" height="18" rx="5.5"/>
+<circle cx="12" cy="12" r="4.1"/>
+<circle cx="17.3" cy="6.7" r="1.05" fill="currentColor" stroke="none"/>
+</svg>
+<span>@{{ _insta }} no Instagram</span>
+</a>
+</p>
+{%- endif %}
+<p class="rodape__atualizado">Site atualizado em {{ site.time | date: "%d/%m/%Y" }}</p>
+<p class="rodape__responsaveis">Responsável pela liga: João Pedro Reis · Responsável pelo portal: Isaac Goldoni</p>
+</div>
+</div>
 </footer>
