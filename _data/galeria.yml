@@ -1,37 +1,29 @@
 # =====================================================================
-#  GALERIA DE ATIVIDADES
-#  As fotos ficam FORA do repositório, num álbum da conta da liga
-#  (Imgur ou Google Fotos). O site mostra um cartão por álbum com UMA
-#  foto de capa e o link para o álbum completo.
+# GALERIA DE ATIVIDADES
+# As fotos ficam FORA do repositório, num álbum da conta da liga
+# (Imgur ou Google Fotos). O site mostra um cartão por álbum com UMA
+# foto de capa e o link para o álbum completo.
 #
-#  capa: foto salva em assets/img/galeria/ (1200 px de largura, até
-#        200 KB), ex.: /assets/img/galeria/simposio-2026.jpg
-#        NÃO use link direto do Imgur (i.imgur.com/...): os termos de
-#        uso do Imgur proíbem usá-lo para hospedar imagens de sites.
-#  link: endereço do álbum, ex.: https://imgur.com/a/AbC123
-#  data: AAAA-MM-DD, sem aspas. Coloque o álbum mais novo no topo.
+# capa: foto salva em assets/img/galeria/ (1200 px de largura, até
+# 200 KB), ex.: /assets/img/galeria/simposio-2026.jpg
+# NÃO use link direto do Imgur (i.imgur.com/...): os termos de
+# uso do Imgur proíbem usá-lo para hospedar imagens de sites.
+# link: endereço do álbum, ex.: https://imgur.com/a/AbC123
+# data: AAAA-MM-DD, sem aspas. Coloque o álbum mais novo no topo.
 #
-#  Antes de publicar fotos de pacientes ou da comunidade, leia
-#  "Dados pessoais e direitos de imagem" no README.
+# Antes de publicar fotos de pacientes ou da comunidade, leia
+# "Dados pessoais e direitos de imagem" no README.
 # =====================================================================
 
 categorias:
-  - id: aulas-praticas
-    titulo: Aulas Práticas
-    albuns:
-      - titulo: "Aula prática de avaliação nutricional (exemplo)"
-        data: 2026-09-05
-        capa: ""
-        link: ""
+- id: aulas-praticas
+  titulo: Aulas da Liga
+  albuns:
+  - titulo: "Aula prática de avaliação nutricional (exemplo)"
+    data: 2026-09-05
+    capa: ""
+    link: ""
 
-  - id: simposios
-    titulo: Simpósios
-    albuns: []
-
-  - id: acoes-comunitarias
-    titulo: Ações Comunitárias
-    albuns: []
-
-  - id: confraternizacoes
-    titulo: Confraternizações
-    albuns: []
+- id: acoes-comunitarias
+  titulo: Ações Comunitárias
+  albuns: []
