@@ -2,38 +2,19 @@
 {%- for c in site.data.galeria.categorias %}
 <section class="galeria-categoria" id="{{ c.id }}" aria-labelledby="{{ c.id }}-titulo">
   <h2 id="{{ c.id }}-titulo">{{ c.titulo }}</h2>
-  {%- if c.albuns and c.albuns.size > 0 %}
-  <ul class="albuns">
-    {%- for al in c.albuns -%}
-      {%- assign _lk = al.link | strip -%}
-      {%- assign _capa = al.capa | strip -%}
-      {%- capture _quando -%}{% include data.html data=al.data formato="mes-ano" %}{%- endcapture %}
-    <li class="album">
-      {%- if _lk != "" %}
-      <a class="album__link" href="{{ _lk }}" target="_blank" rel="noopener">
+  {%- if c.subsecoes and c.subsecoes.size > 0 %}
+    {%- for s in c.subsecoes %}
+    <div class="galeria-subsecao" id="{{ s.id }}" aria-labelledby="{{ s.id }}-titulo">
+      <h3 id="{{ s.id }}-titulo">{{ s.titulo }}</h3>
+      {%- if s.albuns and s.albuns.size > 0 %}
+      {% include galeria-albuns.html albuns=s.albuns %}
       {%- else %}
-      <div class="album__link">
-      {%- endif -%}
-      {%- if _capa != "" %}
-        <img class="album__capa" src="{% include link.html url=_capa %}" alt="" width="600" height="450" loading="lazy">
-      {%- else %}
-        <span class="album__capa album__capa--vazia" aria-hidden="true"></span>
+      <p class="vazio">Nenhuma foto publicada nesta subseção ainda.</p>
       {%- endif %}
-        <span class="album__titulo">{{ al.titulo }}{% if _lk != "" %}<span class="sr"> (abre o álbum em outra aba)</span>{% endif %}</span>
-        {%- if _quando != "" %}
-        <span class="album__meta">{{ _quando | capitalize }}</span>
-        {%- endif -%}
-        {%- if _lk == "" %}
-        <span class="album__meta">Link do álbum em breve</span>
-        {%- endif -%}
-      {%- if _lk != "" %}
-      </a>
-      {%- else %}
-      </div>
-      {%- endif %}
-    </li>
+    </div>
     {%- endfor %}
-  </ul>
+  {%- elsif c.albuns and c.albuns.size > 0 %}
+  {% include galeria-albuns.html albuns=c.albuns %}
   {%- else %}
   <p class="vazio">Nenhum álbum publicado nesta categoria ainda.</p>
   {%- endif %}
