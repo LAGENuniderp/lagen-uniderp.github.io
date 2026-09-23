@@ -778,6 +778,7 @@ a.album__link:hover .album__titulo {
 .rodape__contato p { margin: 0 0 .35rem; }
 .rodape__contato a { overflow-wrap: anywhere; }
 .rodape__atualizado { margin-top: 1rem !important; font-size: .875rem; color: var(--grafite); }
+.rodape__responsaveis { margin-top: .35rem; font-size: .875rem; color: var(--grafite); }
 .rodape__instagram-link { display: inline-flex; align-items: center; gap: .45rem; text-decoration: none; }
 .rodape__instagram-icone { transition: transform .15s ease, color .15s ease; }
 .rodape__instagram-link:hover, .rodape__instagram-link:focus-visible {
