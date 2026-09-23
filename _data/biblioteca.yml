@@ -23,14 +23,6 @@ materiais:
     link: ""
     descricao: "Exemplo de como um material aparece. Apague este bloco."
 
-  - titulo: "Diarreia crônica em adulto jovem (exemplo)"
-    tipo: Caso clínico
-    autores: "Nome Sobrenome"
-    data: 2026-08-20
-    arquivo: ""
-    link: ""
-    descricao: "Caso fictício para discussão em aula. Apague este bloco."
-
     - titulo: "Refluxo Gastroesofágico: Guia de Revisão"
     tipo: Resumo
     autores: "LAGEN"
