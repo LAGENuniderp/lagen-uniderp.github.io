@@ -5,11 +5,20 @@
 # foto de capa e o link para o álbum completo.
 #
 # capa: foto salva em assets/img/galeria/ (1200 px de largura, até
-# 200 KB), ex.: /assets/img/galeria/simposio-2026.jpg
-# NÃO use link direto do Imgur (i.imgur.com/...): os termos de
-# uso do Imgur proíbem usá-lo para hospedar imagens de sites.
+#   200 KB), ex.: /assets/img/galeria/simposio-2026.jpg
+#   NÃO use link direto do Imgur (i.imgur.com/...): os termos de
+#   uso do Imgur proíbem usá-lo para hospedar imagens de sites.
 # link: endereço do álbum, ex.: https://imgur.com/a/AbC123
+#   Quando a foto já foi publicada direto no site (sem álbum externo),
+#   deixe link vazio (""): a foto aparece do mesmo jeito, só sem o
+#   texto "Link do álbum em breve".
 # data: AAAA-MM-DD, sem aspas. Coloque o álbum mais novo no topo.
+#
+# subsecoes (opcional, dentro de uma categoria): agrupa os álbuns em
+# blocos menores, cada um com id, titulo e a própria lista de albuns
+# (mesmo formato de sempre). Use quando uma categoria tiver mais de
+# um tipo de atividade (ex.: Ações Comunitárias com Páscoa e ação em
+# escola).
 #
 # Antes de publicar fotos de pacientes ou da comunidade, leia
 # "Dados pessoais e direitos de imagem" no README.
@@ -19,11 +28,57 @@ categorias:
 - id: aulas-praticas
   titulo: Aulas da Liga
   albuns:
-  - titulo: "Aula prática de avaliação nutricional (exemplo)"
-    data: 2026-09-05
-    capa: ""
+  - titulo: "Boas-vindas da nova gestão"
+    data: ""
+    capa: /assets/img/galeria/aula-boas-vindas-gestao.jpg
+    link: ""
+  - titulo: "Aula sobre História da Doença Atual (HDA)"
+    data: ""
+    capa: /assets/img/galeria/aula-hda.jpg
+    link: ""
+  - titulo: "Aula sobre aleitamento materno"
+    data: ""
+    capa: /assets/img/galeria/aula-aleitamento-materno.jpg
+    link: ""
+  - titulo: "Estudo em grupo entre os membros"
+    data: ""
+    capa: /assets/img/galeria/aula-estudo-em-grupo.jpg
+    link: ""
+  - titulo: "Encerramento de aula"
+    data: ""
+    capa: /assets/img/galeria/aula-encerramento.jpg
     link: ""
 
 - id: acoes-comunitarias
   titulo: Ações Comunitárias
-  albuns: []
+  subsecoes:
+  - id: acao-pascoa
+    titulo: Ação de Páscoa
+    albuns:
+    - titulo: "Chocolates arrecadados para a ação"
+      data: ""
+      capa: /assets/img/galeria/pascoa-chocolates-arrecadados.jpg
+      link: ""
+    - titulo: "Entrega ao Cottolengo Sul-Mato-Grossense"
+      data: ""
+      capa: /assets/img/galeria/pascoa-entrega-cottolengo.jpg
+      link: ""
+  - id: acao-escola
+    titulo: Ação Comunitária em Escola
+    albuns:
+    - titulo: "Educação alimentar: semáforo dos alimentos"
+      data: ""
+      capa: /assets/img/galeria/escola-educacao-alimentar-semaforo.jpg
+      link: ""
+    - titulo: "Dinâmica do prato alimentar com os alunos"
+      data: ""
+      capa: /assets/img/galeria/escola-jogo-prato-alimentar.jpg
+      link: ""
+    - titulo: "Equipe da liga durante a ação"
+      data: ""
+      capa: /assets/img/galeria/escola-equipe-na-quadra.jpg
+      link: ""
+    - titulo: "Grupo de voluntários na escola"
+      data: ""
+      capa: /assets/img/galeria/escola-grupo-completo.jpg
+      link: ""
