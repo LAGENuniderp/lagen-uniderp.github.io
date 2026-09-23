@@ -1,83 +1,83 @@
 # =====================================================================
-#  DIRETORIA (página "A Liga"). A ordem aqui é a ordem no site.
+# DIRETORIA (página "A Liga"). A ordem aqui é a ordem no site.
 #
-#  foto:     opcional. Envie para assets/img/diretoria/ uma foto
-#            quadrada (~400×400 px, até 150 KB) e escreva o caminho,
-#            ex.: /assets/img/diretoria/joao-pedro-reis.jpg
-#            Sem foto, o site mostra as iniciais.
-#  email:    opcional. Prefira e-mail da liga ou institucional.
-#  telefone: opcional e NÃO recomendado: o site e o repositório são
-#            públicos. Leia "Dados pessoais e direitos de imagem" no README.
+# foto: opcional. Envie para assets/img/diretoria/ uma foto
+#       quadrada (~400×400 px, até 150 KB) e escreva o caminho,
+#       ex.: /assets/img/diretoria/joao-pedro-reis.jpg
+#       Sem foto, o site mostra as iniciais.
+# email: opcional. Prefira e-mail da liga ou institucional.
+# telefone: opcional e NÃO recomendado: o site e o repositório são
+#       públicos. Leia "Dados pessoais e direitos de imagem" no README.
 # =====================================================================
 
 - nome: João Pedro Reis
   cargo: Presidente
-  foto: ""
+  foto: /assets/img/diretoria/joao-pedro-reis.jpg
   email: ""
   telefone: ""
 
 - nome: Pedro Lavezo
   cargo: Vice-Presidente
-  foto: ""
+  foto: /assets/img/diretoria/pedro-lavezo.jpg
   email: ""
   telefone: ""
 
 - nome: Anna Julia Araújo
   cargo: Diretoria Geral
-  foto: ""
+  foto: /assets/img/diretoria/anna-julia-araujo.jpg
   email: ""
   telefone: ""
 
 - nome: Camila Cabrera
   cargo: Diretora Secretária
-  foto: ""
+  foto: /assets/img/diretoria/camila-cabrera.jpg
   email: ""
   telefone: ""
 
 - nome: Beatriz Albuquerque
   cargo: Diretora de Extensão
-  foto: ""
+  foto: /assets/img/diretoria/beatriz-albuquerque.jpg
   email: ""
   telefone: ""
 
 - nome: Maria Eduarda Linares
   cargo: Diretora de Eventos e Comunicação
-  foto: ""
+  foto: /assets/img/diretoria/maria-eduarda-linares.jpg
   email: ""
   telefone: ""
 
 - nome: Isaac Goldoni
   cargo: Diretor Tesoureiro
-  foto: ""
+  foto: /assets/img/diretoria/isaac-goldoni.jpg
   email: ""
   telefone: ""
 
 - nome: Maria Clara Giroto
   cargo: Diretora de Ensino Teórico
-  foto: ""
+  foto: /assets/img/diretoria/maria-clara-giroto.jpg
   email: ""
   telefone: ""
 
 - nome: Ana Laura Giroto
   cargo: Diretora de Estágios
-  foto: ""
+  foto: /assets/img/diretoria/ana-laura-giroto.jpg
   email: ""
   telefone: ""
 
 - nome: Tamaeh Monteiro
   cargo: Diretora Científica
-  foto: ""
+  foto: /assets/img/diretoria/tamaeh-monteiro.jpg
   email: ""
   telefone: ""
 
 - nome: Maria Eduarda Duchini
   cargo: Diretora Cultural
-  foto: ""
+  foto: /assets/img/diretoria/maria-eduarda-duchini.jpg
   email: ""
   telefone: ""
 
 - nome: Eduardo Borba
   cargo: Diretor de Relações Externas
-  foto: ""
+  foto: /assets/img/diretoria/eduardo-borba.jpg
   email: ""
   telefone: ""
