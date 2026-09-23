@@ -1,44 +1,47 @@
 {%- comment -%} Biblioteca acadêmica. Conteúdo em _data/biblioteca.yml {%- endcomment -%}
 {%- assign _materiais = site.data.biblioteca.materiais -%}
 {%- if _materiais and _materiais.size > 0 -%}
-  {%- assign _grupos = _materiais | group_by: "tipo" -%}
-  {%- for g in _grupos %}
-    {%- assign _tipo = g.name | strip -%}
-    {%- case _tipo -%}
-      {%- when "Resumo" -%}{%- assign _tipo = "Resumos" -%}
-      {%- when "Caso clínico" -%}{%- assign _tipo = "Casos clínicos" -%}
-      {%- when "" -%}{%- assign _tipo = "Outros materiais" -%}
-      {%- when "Outro" -%}{%- assign _tipo = "Outros materiais" -%}
-    {%- endcase %}
+{%- assign _grupos = _materiais | group_by: "tipo" -%}
+{%- for g in _grupos %}
+{%- assign _tipo = g.name | strip -%}
+{%- case _tipo -%}
+{%- when "Resumo" -%}{%- assign _tipo = "Resumos" -%}
+{%- when "Caso clínico" -%}{%- assign _tipo = "Estante Científica" -%}
+{%- when "" -%}{%- assign _tipo = "Outros materiais" -%}
+{%- when "Outro" -%}{%- assign _tipo = "Outros materiais" -%}
+{%- endcase %}
 <h3 class="biblioteca__tipo">{{ _tipo }}</h3>
+{%- if _tipo == "Estante Científica" %}
+<p class="biblioteca__tipo-desc">Um espaço dedicado a compartilhar os artigos científicos mais atualizados, com novidades na área médica.</p>
+{%- endif %}
 <ul class="biblioteca">
-    {%- for m in g.items -%}
-      {%- assign _arq = m.arquivo | strip -%}
-      {%- assign _lnk = m.link | strip -%}
-      {%- assign _aut = m.autores | strip -%}
-      {%- assign _desc = m.descricao | strip %}
-  <li class="material">
-    <p class="material__titulo">
-      {%- if _arq != "" -%}
-        {%- assign _ext = _arq | split: "." | last | downcase -%}
-        <a href="{% include link.html url=_arq %}">{{ m.titulo }}</a>{% if _ext == "pdf" %} <span class="material__formato">PDF</span>{% endif %}
-      {%- elsif _lnk != "" -%}
-        <a href="{{ _lnk }}" target="_blank" rel="noopener">{{ m.titulo }}<span class="sr"> (abre em outra aba)</span></a>
-      {%- else -%}
-        {{ m.titulo }} <span class="material__formato">em breve</span>
-      {%- endif -%}
-    </p>
-    <p class="material__meta">
-      {%- if _aut != "" %}Por {{ _aut }}.{% endif -%}
-      {%- if m.data %} Publicado em {% include data.html data=m.data formato="mes-ano" %}.{% endif -%}
-    </p>
-    {%- if _desc != "" %}
-    <p class="material__descricao">{{ _desc }}</p>
-    {%- endif %}
-  </li>
-    {%- endfor %}
+{%- for m in g.items -%}
+{%- assign _arq = m.arquivo | strip -%}
+{%- assign _lnk = m.link | strip -%}
+{%- assign _aut = m.autores | strip -%}
+{%- assign _desc = m.descricao | strip %}
+<li class="material">
+<p class="material__titulo">
+{%- if _arq != "" -%}
+{%- assign _ext = _arq | split: "." | last | downcase -%}
+<a href="{% include link.html url=_arq %}">{{ m.titulo }}</a>{% if _ext == "pdf" %} <span class="material__formato">PDF</span>{% endif %}
+{%- elsif _lnk != "" -%}
+<a href="{{ _lnk }}" target="_blank" rel="noopener">{{ m.titulo }}<span class="sr"> (abre em outra aba)</span></a>
+{%- else -%}
+{{ m.titulo }} <span class="material__formato">em breve</span>
+{%- endif -%}
+</p>
+<p class="material__meta">
+{%- if _aut != "" %}Por {{ _aut }}.{% endif -%}
+{%- if m.data %} Publicado em {% include data.html data=m.data formato="mes-ano" %}.{% endif -%}
+</p>
+{%- if _desc != "" %}
+<p class="material__descricao">{{ _desc }}</p>
+{%- endif %}
+</li>
+{%- endfor %}
 </ul>
-  {%- endfor -%}
+{%- endfor -%}
 {%- else %}
 <p class="vazio">Ainda não há materiais publicados.</p>
 {%- endif -%}
@@ -46,8 +49,8 @@
 {%- if _fontes and _fontes.size > 0 %}
 <h3 class="biblioteca__tipo">Fontes oficiais externas</h3>
 <ul class="fontes">
-  {%- for f in _fontes %}
-  <li><a href="{{ f.url }}" target="_blank" rel="noopener">{{ f.titulo }}<span class="sr"> (abre em outra aba)</span></a></li>
-  {%- endfor %}
+{%- for f in _fontes %}
+<li><a href="{{ f.url }}" target="_blank" rel="noopener">{{ f.titulo }}<span class="sr"> (abre em outra aba)</span></a></li>
+{%- endfor %}
 </ul>
 {%- endif -%}
