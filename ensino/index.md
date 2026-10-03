@@ -10,9 +10,7 @@ description: Cronograma de aulas, escala de estágios e plantões e biblioteca a
 
 ## Escala de estágios e plantões {#escala}
 
-A escala é editada direto na planilha pela Diretoria de Estágios. O que
-aparece aqui é sempre a versão mais recente, sem depender de atualização
-do site.
+A escala é editada direto na planilha pela Diretoria de Estágios. Abra a planilha pelo botão abaixo para ver sempre a versão mais recente, sem depender de atualização do site.
 
 {% include escala.html %}
 
