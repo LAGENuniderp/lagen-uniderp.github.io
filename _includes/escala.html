@@ -10,6 +10,8 @@
   <iframe src="{{ _url }}" title="Escala de estágios e plantões" height="{{ site.data.escala.altura | default: 640 }}" loading="lazy"></iframe>
 </div>
 <p class="embed__alternativa"><a href="{{ _completa }}" target="_blank" rel="noopener">Abrir a escala em tela cheia<span class="sr"> (abre em outra aba)</span></a></p>
+  {%- elsif site.data.escala.planilha_link and site.data.escala.planilha_link != "" %}
+  <p><a class="botao" href="{{ site.data.escala.planilha_link }}" target="_blank" rel="noopener">Abrir a planilha de estágios e plantões<span class="sr"> (abre em outra aba)</span></a></p>
 {%- else %}
 <p class="vazio">A escala deste período ainda não foi publicada.</p>
 {%- endif -%}
