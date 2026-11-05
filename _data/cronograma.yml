@@ -38,3 +38,10 @@
   professor: "Dr. Guilherme"
   local: "A definir"
   obs: ""
+
+- data: 2026-11-11
+  horario: "18h00"
+  tema: "Exames de imagem abdominais"
+  professor: "Alessandra (intensivista e professora de Anatomia do 4º semestre)"
+  local: "A definir"
+  obs: ""
